@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Tareas</title>
+</head>
+<body>
+
+    <label>Tarea:</label>
+    <input type="text" id="tarea">
+    <button onclick="agregarTarea()">Agregar</button>
+
+    <h3>Lista:</h3>
+    <ul id="lista"></ul>
+
+    <script>
+        function agregarTarea() {
+            var texto = document.getElementById("tarea").value;
+
+            if (texto !== "") {
+                var li = document.createElement("li");
+                li.textContent = texto;
+
+                document.getElementById("lista").appendChild(li);
+
+                document.getElementById("tarea").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
